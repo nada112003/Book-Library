@@ -1,0 +1,47 @@
+@model Smart_Tutor.Models.Book
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h2 class="card-title">Book Details</h2>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Title)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Title)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Author)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Author)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Genre)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Genre)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.PublishDate)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.PublishDate)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Description)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+                    </dl>
+
+                    <div class="mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Delete
+                        </a>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="fas fa-arrow-right"></i> Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
